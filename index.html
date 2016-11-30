@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue JS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{message}}</h1>
+      <ul>
+        <li style="list-style-type:none;" v-for="todo in todos">{{todo.id}}) {{todo.text}}</li>
+      </ul>
+      <ul>
+        <li v-for="count in count">{{count}}</li>
+      </ul>
+    </div>
+  </body>
+
+  <script src="https://unpkg.com/vue@2.1.3/dist/vue.js"></script>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello Vue World!',
+        todos: [
+          {id: 1, text: 'Learn Vue.js'},
+          {id: 2, text: 'Learn Testing in Vue'},
+          {id: 3, text: 'Learn AJAX with Vue'}
+        ],
+        count: 5
+      }
+    });
+  </script>
+<html>
